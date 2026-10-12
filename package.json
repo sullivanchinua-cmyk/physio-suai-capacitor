@@ -1,0 +1,28 @@
+{
+  "name": "physio-suai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Physio SUAI - web app wrapped with Capacitor (Android)",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "postinstall": "node scripts/copy-vendor.js",
+    "android:patch": "node scripts/patch-android.js",
+    "android:patch:play": "node scripts/patch-android.js --play-store",
+    "sync": "node scripts/copy-vendor.js && cap sync android",
+    "open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/app": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/geolocation": "^8.0.0",
+    "@capacitor/local-notifications": "^8.0.0",
+    "@capacitor/push-notifications": "^8.0.0",
+    "@capacitor-community/sqlite": "^8.0.0",
+    "firebase": "9.22.0",
+    "physio-device-files": "file:./plugins/physio-device-files"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.0.0"
+  }
+}

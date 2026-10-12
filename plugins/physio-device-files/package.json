@@ -1,0 +1,19 @@
+{
+  "name": "physio-device-files",
+  "version": "1.0.0",
+  "description": "Native Android file access for Physio SUAI: gallery, audio, documents and contacts for the WhatsApp-style attach pickers.",
+  "license": "UNLICENSED",
+  "private": true,
+  "files": [
+    "android/src/main/",
+    "android/build.gradle"
+  ],
+  "capacitor": {
+    "android": {
+      "src": "android"
+    }
+  },
+  "peerDependencies": {
+    "@capacitor/core": ">=7.0.0"
+  }
+}

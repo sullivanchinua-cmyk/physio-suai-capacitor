@@ -1,0 +1,19 @@
+{
+  "appId": "com.physiosuai.app",
+  "appName": "Physio SUAI",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "css"
+    },
+    "LocalNotifications": {
+      "iconColor": "#9333EA"
+    },
+    "PushNotifications": {
+      "presentationOptions": ["badge", "sound", "alert"]
+    }
+  }
+}
