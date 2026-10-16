@@ -17,6 +17,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Test FIREBASE_API_KEY secret is available
+        env:
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+        run: |
+          if [ -z "$FIREBASE_API_KEY" ]; then
+            echo "ERROR: FIREBASE_API_KEY secret is not set or empty"
+            exit 1
+          fi
+          echo "SUCCESS: FIREBASE_API_KEY secret is present (length: ${#FIREBASE_API_KEY})"
+          # Do NOT echo the actual value - GitHub will mask it anyway
+
       - name: Set up Node 22
         uses: actions/setup-node@v4
         with:
